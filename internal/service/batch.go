@@ -7,6 +7,12 @@ import (
 )
 
 func (s *Service) BatchEvaluate(ctx context.Context, key string, versionNumber int, requests []model.EvaluationRequest) ([]model.Decision, error) {
+	select {
+	case <-ctx.Done():
+		return nil, ctx.Err()
+	default:
+	}
+
 	results := make([]model.Decision, 0, len(requests))
 	for _, request := range requests {
 		decision, err := s.Evaluate(key, versionNumber, request)
