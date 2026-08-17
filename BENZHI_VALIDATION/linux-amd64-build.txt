@@ -1,0 +1,45 @@
+COMMAND: docker build --platform linux/amd64 -t go-feature-rollout-bug1-candidate -f benzhi.Dockerfile .
+EXIT_CODE: 0
+#0 building with "desktop-linux" instance using docker driver
+System.Management.Automation.RemoteException
+#1 [internal] load build definition from benzhi.Dockerfile
+#1 transferring dockerfile: 120B done
+#1 DONE 0.0s
+System.Management.Automation.RemoteException
+#2 [internal] load metadata for docker.io/library/golang:1.22
+#2 DONE 0.6s
+System.Management.Automation.RemoteException
+#3 [internal] load .dockerignore
+#3 transferring context: 150B done
+#3 DONE 0.0s
+System.Management.Automation.RemoteException
+#4 [1/4] FROM docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02
+#4 resolve docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02 0.0s done
+#4 DONE 0.0s
+System.Management.Automation.RemoteException
+#5 [internal] load build context
+#5 transferring context: 33.30kB 0.0s done
+#5 DONE 0.0s
+System.Management.Automation.RemoteException
+#6 [2/4] WORKDIR /app
+#6 CACHED
+System.Management.Automation.RemoteException
+#7 [3/4] COPY . .
+#7 DONE 0.0s
+System.Management.Automation.RemoteException
+#8 [4/4] RUN go build ./...
+#8 DONE 10.1s
+System.Management.Automation.RemoteException
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 2.0s done
+#9 exporting manifest sha256:e72555c1314a15208c9ccf01140ff9c7fed821188c19942742e0935da8198098 0.0s done
+#9 exporting config sha256:2077b299332bfdb5c250941ee7550916962c51120d00dee88aa31e43d79d54f5 done
+#9 exporting attestation manifest sha256:80d082a3023777fbe92d8129034990a3151239dc48c6854c6af54d53df85fb41 0.0s done
+#9 exporting manifest list sha256:94c69da01b7dd1005f84ef4da678e1df94b4f2ba6683cc531f872d0cae95b721 done
+#9 naming to docker.io/library/go-feature-rollout-bug1-candidate:latest done
+#9 unpacking to docker.io/library/go-feature-rollout-bug1-candidate:latest
+#9 unpacking to docker.io/library/go-feature-rollout-bug1-candidate:latest 0.7s done
+#9 DONE 2.8s
+System.Management.Automation.RemoteException
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/0t3tl4v55u210nc8nspu8om38

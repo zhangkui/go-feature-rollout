@@ -1,0 +1,4 @@
+COMMAND: docker run ... isolation
+EXIT_CODE: 0
+go version go1.22.12 linux/amd64
+ISOLATION_OK
