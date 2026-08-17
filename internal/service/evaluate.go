@@ -13,7 +13,7 @@ import (
 func bucketFor(flagKey, subjectID string) int {
 	hasher := fnv.New32a()
 	_, _ = hasher.Write([]byte(flagKey + ":" + subjectID))
-	return int(hasher.Sum32() % 99)
+	return int(hasher.Sum32() % 100)
 }
 
 func (s *Service) Evaluate(key string, versionNumber int, request model.EvaluationRequest) (model.Decision, error) {
