@@ -1,0 +1,7 @@
+COMMAND: docker run --platform linux/arm64 go-feature-rollout-bug3-candidate bash -c 'go build -buildvcs=false ./... && go test -buildvcs=false -count=1 -run ^TestEvaluatePercentageUsesHundredBuckets$ ./internal/service && go test -buildvcs=false -count=1 ./...'
+EXIT_CODE: 0
+ok  	github.com/zhangkui/go-feature-rollout/internal/service	0.086s
+?   	github.com/zhangkui/go-feature-rollout/cmd	[no test files]
+?   	github.com/zhangkui/go-feature-rollout/internal/model	[no test files]
+ok  	github.com/zhangkui/go-feature-rollout/internal/httpapi	0.141s
+ok  	github.com/zhangkui/go-feature-rollout/internal/service	0.090s
