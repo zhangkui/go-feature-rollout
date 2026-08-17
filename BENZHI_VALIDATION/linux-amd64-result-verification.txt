@@ -1,0 +1,3 @@
+COMMAND: docker run --platform linux/amd64 -v private_test go-feature-rollout-bug5-candidate bash -c 'go test -buildvcs=false -count=20 -run ^TestCanceledBatchReturnsWithoutPartialDecisions$ ./internal/service'
+EXIT_CODE: 0
+ok  	github.com/zhangkui/go-feature-rollout/internal/service	0.003s

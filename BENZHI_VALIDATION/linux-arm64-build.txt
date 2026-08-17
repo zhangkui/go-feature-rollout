@@ -1,0 +1,43 @@
+COMMAND: docker build --platform linux/arm64 -t go-feature-rollout-bug5-candidate -f benzhi.Dockerfile .
+EXIT_CODE: 0
+#0 building with "desktop-linux" instance using docker driver
+System.Management.Automation.RemoteException
+#1 [internal] load build definition from benzhi.Dockerfile
+#1 transferring dockerfile: 120B done
+#1 DONE 0.0s
+System.Management.Automation.RemoteException
+#2 [internal] load metadata for docker.io/library/golang:1.22
+#2 DONE 0.2s
+System.Management.Automation.RemoteException
+#3 [internal] load .dockerignore
+#3 transferring context: 150B done
+#3 DONE 0.0s
+System.Management.Automation.RemoteException
+#4 [1/4] FROM docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02
+#4 resolve docker.io/library/golang:1.22@sha256:1cf6c45ba39db9fd6db16922041d074a63c935556a05c5ccb62d181034df7f02 0.0s done
+#4 DONE 0.0s
+System.Management.Automation.RemoteException
+#5 [internal] load build context
+#5 transferring context: 987B done
+#5 DONE 0.0s
+System.Management.Automation.RemoteException
+#6 [2/4] WORKDIR /app
+#6 CACHED
+System.Management.Automation.RemoteException
+#7 [3/4] COPY . .
+#7 DONE 0.0s
+System.Management.Automation.RemoteException
+#8 [4/4] RUN go build ./...
+#8 DONE 102.5s
+System.Management.Automation.RemoteException
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 1.7s done
+#9 exporting manifest sha256:4f9901b422a371f6da8656bdd4e8ef9dbb47c162b096dbc10ef1722d32fce0a9 done
+#9 exporting config sha256:52681e0f3cdc542659fcc82cd037a456a784f907535fa5fb3d9ed9f4167a6c32 done
+#9 exporting attestation manifest sha256:3489fc3543975f42b5012cd0b11268e4927c9f74a9afe66314d9ca79c7f971a2 0.0s done
+#9 exporting manifest list sha256:32a869f5c588b085a000aa847158e2b8370e0f47c856d6a27096bbe9f4eb70a9 0.0s done
+#9 naming to docker.io/library/go-feature-rollout-bug5-candidate:latest done
+#9 DONE 1.8s
+System.Management.Automation.RemoteException
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/s5rlp25l3uftt8jjr7xft3l4h
