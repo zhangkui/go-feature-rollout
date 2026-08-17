@@ -39,11 +39,11 @@ func (s *Service) CreateFlag(key, description string) (model.Flag, error) {
 
 	s.mu.Lock()
 	defer s.mu.Unlock()
-	if _, exists := s.flags[rawKey]; exists {
+	canonical := canonicalKey(rawKey)
+	if _, exists := s.flags[canonical]; exists {
 		return model.Flag{}, ErrFlagExists
 	}
 
-	canonical := canonicalKey(rawKey)
 	flag := &model.Flag{
 		Key:         canonical,
 		Description: strings.TrimSpace(description),
