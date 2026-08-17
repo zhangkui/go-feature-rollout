@@ -50,7 +50,7 @@ func (s *Service) Rollback(key string, number int) error {
 		if version.Number != number {
 			continue
 		}
-		flag.Draft = shallowCloneVersion(version)
+		flag.Draft = deepCloneVersion(version)
 		flag.Draft.Number = number
 		flag.Draft.PublishedAt = nil
 		flag.Draft.Source = "rollback"
@@ -86,12 +86,6 @@ func deepCloneVersion(version model.Version) model.Version {
 	for index, rule := range version.Rules {
 		cloned.Rules[index] = deepCloneRule(rule)
 	}
-	return cloned
-}
-
-func shallowCloneVersion(version model.Version) model.Version {
-	cloned := version
-	cloned.Rules = append([]model.Rule(nil), version.Rules...)
 	return cloned
 }
 
