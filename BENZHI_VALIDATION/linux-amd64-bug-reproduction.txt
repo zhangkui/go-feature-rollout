@@ -1,0 +1,12 @@
+COMMAND: docker run --platform linux/amd64 go-feature-rollout-bug2-candidate bash -c 'go build -buildvcs=false ./... && if go test -buildvcs=false -count=1 -run ^TestValidateRuleRejectsZeroLengthWindow$ ./internal/service; then echo UNEXPECTED_GREEN; exit 1; else echo EXPECTED_RED; fi && go test -buildvcs=false -count=1 -skip ^TestValidateRuleRejectsZeroLengthWindow$ ./...'
+EXIT_CODE: 0
+--- FAIL: TestValidateRuleRejectsZeroLengthWindow (0.00s)
+    zero_window_verification_test.go:14: expected equal start and end times to be rejected
+FAIL
+FAIL	github.com/zhangkui/go-feature-rollout/internal/service	0.003s
+FAIL
+EXPECTED_RED
+?   	github.com/zhangkui/go-feature-rollout/cmd	[no test files]
+?   	github.com/zhangkui/go-feature-rollout/internal/model	[no test files]
+ok  	github.com/zhangkui/go-feature-rollout/internal/httpapi	0.005s
+ok  	github.com/zhangkui/go-feature-rollout/internal/service	0.003s

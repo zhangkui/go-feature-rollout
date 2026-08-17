@@ -1,0 +1,46 @@
+COMMAND: docker run --platform linux/amd64 -v private_test go-feature-rollout-bug2-candidate bash -c 'if go test -buildvcs=false -count=20 -run ^TestTimeWindowRequiresStrictlyPositiveDuration$ ./internal/service; then echo UNEXPECTED_PRIVATE_GREEN; exit 1; else echo EXPECTED_PRIVATE_RED; fi'
+EXIT_CODE: 0
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+--- FAIL: TestTimeWindowRequiresStrictlyPositiveDuration (0.00s)
+    time_window_private_test.go:13: zero-duration window should be invalid
+FAIL
+FAIL	github.com/zhangkui/go-feature-rollout/internal/service	0.004s
+FAIL
+EXPECTED_PRIVATE_RED

@@ -1,0 +1,22 @@
+diff --git a/internal/service/zero_window_verification_test.go b/internal/service/zero_window_verification_test.go
+new file mode 100644
+index 0000000..4ded1f1
+--- /dev/null
++++ b/internal/service/zero_window_verification_test.go
+@@ -0,0 +1,16 @@
++package service
++
++import (
++	"testing"
++	"time"
++
++	"github.com/zhangkui/go-feature-rollout/internal/model"
++)
++
++func TestValidateRuleRejectsZeroLengthWindow(t *testing.T) {
++	instant := time.Date(2026, time.August, 17, 12, 0, 0, 0, time.UTC)
++	rule := model.Rule{ID: "instant", Priority: 1, Enabled: true, StartAt: &instant, EndAt: &instant}
++	if err := ValidateRule(rule); err == nil {
++		t.Fatal("expected equal start and end times to be rejected")
++	}
++}
