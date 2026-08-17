@@ -1,0 +1,12 @@
+COMMAND: docker run --platform linux/arm64 go-feature-rollout-bug4-candidate bash -c 'go build -buildvcs=false ./... && if go test -buildvcs=false -count=1 -run ^TestRollbackDraftDoesNotMutatePublishedVersion$ ./internal/service; then echo UNEXPECTED_GREEN; exit 1; else echo EXPECTED_RED; fi && go test -buildvcs=false -count=1 -skip ^TestRollbackDraftDoesNotMutatePublishedVersion$ ./...'
+EXIT_CODE: 0
+--- FAIL: TestRollbackDraftDoesNotMutatePublishedVersion (0.00s)
+    rollback_isolation_verification_test.go:36: published version changed through rollback draft: got "staging"
+FAIL
+FAIL	github.com/zhangkui/go-feature-rollout/internal/service	0.088s
+FAIL
+EXPECTED_RED
+?   	github.com/zhangkui/go-feature-rollout/cmd	[no test files]
+?   	github.com/zhangkui/go-feature-rollout/internal/model	[no test files]
+ok  	github.com/zhangkui/go-feature-rollout/internal/httpapi	0.140s
+ok  	github.com/zhangkui/go-feature-rollout/internal/service	0.090s

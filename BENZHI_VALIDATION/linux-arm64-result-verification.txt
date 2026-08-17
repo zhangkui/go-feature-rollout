@@ -1,0 +1,46 @@
+COMMAND: docker run --platform linux/arm64 -v private_test go-feature-rollout-bug4-candidate bash -c 'if go test -buildvcs=false -count=20 -run ^TestHistoricalEvaluationRemainsStableAfterRollbackEdit$ ./internal/service; then echo UNEXPECTED_PRIVATE_GREEN; exit 1; else echo EXPECTED_PRIVATE_RED; fi'
+EXIT_CODE: 0
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.01s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+--- FAIL: TestHistoricalEvaluationRemainsStableAfterRollbackEdit (0.00s)
+    rollback_history_private_test.go:35: historical version no longer matches original audience: {Enabled:false Version:1 MatchedRuleID: Bucket:<nil> Trace:[{RuleID:region Matched:false Reason:attribute does not equal expected value}]}
+FAIL
+FAIL	github.com/zhangkui/go-feature-rollout/internal/service	0.099s
+FAIL
+EXPECTED_PRIVATE_RED
