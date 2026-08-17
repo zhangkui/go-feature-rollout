@@ -18,7 +18,7 @@ func ValidateRule(rule model.Rule) error {
 	if rule.Percentage != nil && (*rule.Percentage < 0 || *rule.Percentage > 100) {
 		return errors.New("percentage must be between 0 and 100")
 	}
-	if rule.StartAt != nil && rule.EndAt != nil && rule.EndAt.Before(*rule.StartAt) {
+	if rule.StartAt != nil && rule.EndAt != nil && !rule.EndAt.After(*rule.StartAt) {
 		return errors.New("end time must be after start time")
 	}
 	for index, condition := range rule.Conditions {
